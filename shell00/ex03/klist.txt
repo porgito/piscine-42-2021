@@ -1,0 +1,5 @@
+Credentials cache: API:71258736-1120-4396-A5E0-43F984CA49B0
+        Principal: jlaurent@42LAUSANNE.CH
+
+  Issued                Expires               Principal
+Jul  5 12:40:15 2021  Jul  5 22:40:08 2021  krbtgt/42LAUSANNE.CH@42LAUSANNE.CH
