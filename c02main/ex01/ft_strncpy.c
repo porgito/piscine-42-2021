@@ -6,7 +6,7 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 10:16:41 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/14 17:33:06 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/15 12:40:32 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 int	main()
 {
 	char *src;
-	char dest[20];
+	char dest[29];
 	src = "salut a tous";
 
 	printf("%s\n", src);

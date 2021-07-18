@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 12:11:49 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/17 20:42:07 by jlaurent         ###   ########.fr       */
+/*   Created: 2021/07/18 11:52:36 by jlaurent          #+#    #+#             */
+/*   Updated: 2021/07/18 14:07:31 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int	ft_strlen(char *str)
+int	ft_iterative_factorial(int nb)
 {
-	int	nb;
-
-	nb = 0;
-	while (str[nb] != '\0')
-	{
-		nb++;
-	}
-	return (nb);
+	int	i;
 }
-
-/*int	main()
-{
-	char	str[] = "fvdsjilj";
-	printf("%d", ft_strlen(str));
-}*/

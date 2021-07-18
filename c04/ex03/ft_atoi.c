@@ -6,11 +6,10 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 10:35:13 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/16 12:56:40 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/17 20:47:22 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -23,7 +22,7 @@ int	ft_atoi(char *str)
 	moins = 0;
 	signe = 1;
 	res = 0;
-	while (str[count] >= 9 && str[count] <= 13 || str[count] == 32)
+	while ((str[count] >= 9 && str[count] <= 13) || str[count] == 32)
 		count++;
 	while (str[count] == '-' || str[count] == '+')
 	{
@@ -41,9 +40,9 @@ int	ft_atoi(char *str)
 	return (res * signe);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[] = "   -++----3563";
 
 	printf("%d", ft_atoi(str));
-}
+}*/
