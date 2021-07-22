@@ -6,12 +6,12 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 10:18:01 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/14 19:13:51 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/20 10:32:33 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -25,7 +25,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[n] - s2[n]);
 }
 
-int	main()
+/*int	main()
 {
 	char	s1[] = "test";
 	char	s2[] = "tesu";
@@ -38,4 +38,4 @@ int	main()
 	printf("%d\n", ft_strcmp(p, i));
 	test =  strcmp(p, i);
 	printf("%d", test);
-}
+}*/

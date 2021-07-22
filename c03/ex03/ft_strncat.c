@@ -6,47 +6,32 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 09:45:59 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/15 09:57:32 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/20 12:34:17 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-int	ft_strlen(char *str)
-{
-	int	nbr;
-
-	nbr = 0;
-	while (*str != '\0')
-	{
-		nbr++;
-		str++;
-	}
-	return (nbr);
-}
+//#include <stdio.h>
+//#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	u;
-	int	a;
+	char	*dest2;
 
-	a = ft_strlen(dest);
-	u = 0;
-	while (u != nb)
+	dest2 = dest;
+	while (*dest2)
+		dest2++;
+	while (nb-- && *src)
 	{
-		dest[a] = src[u];
-		a++;
-		u++;
+		*dest2++ = *src++;
 	}
-	dest[a] = '\0';
+	*dest2 = '\0';
 	return (dest);
 }
 
-int	main()
+/*int	main()
 {
 	char	dest[20] = "salut ";
 	char	src[] =  "a tous !";
 
-	printf("%s\n", ft_strncat(dest, src, 0));
-}
+	printf("%s\n", ft_strncat(dest, src, 19));
+}*/
