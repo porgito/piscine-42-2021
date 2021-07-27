@@ -1,48 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 14:32:24 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/22 09:46:41 by jlaurent         ###   ########.fr       */
+/*   Created: 2021/07/14 10:18:01 by jlaurent          #+#    #+#             */
+/*   Updated: 2021/07/20 10:32:33 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
+//#include <string.h>
 
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-}
+	int	n;
 
-void	ft_putnbr(int nb)
-{
-	unsigned int	i;
-
-	if (nb < 0)
+	n = 0;
+	while (s1[n] == s2[n] && s2[n] != '\0' && s1[n] != '\0')
 	{
-		i = -nb;
-		ft_putchar('-');
+		n++;
 	}
-	else
-	{
-		i = nb;
-	}
-	if (i > 9)
-	{
-		ft_putnbr(i / 10);
-		i %= 10;
-	}
-	ft_putchar(i + '0');
+	return (s1[n] - s2[n]);
 }
 
 /*int	main()
 {
-	ft_putnbr(-2147483648);
-	ft_putchar('\n');
-	ft_putnbr(2147483647);
-	ft_putchar('\n');
-	ft_putnbr(0);
+	char	s1[] = "test";
+	char	s2[] = "tesu";
+	int	test;
+
+	char	*p;
+	char	*i;
+	p = s1;
+	i = s2;
+	printf("%d\n", ft_strcmp(p, i));
+	test =  strcmp(p, i);
+	printf("%d", test);
 }*/

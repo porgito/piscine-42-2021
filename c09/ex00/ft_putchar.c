@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlaurent <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 14:32:24 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/22 09:46:41 by jlaurent         ###   ########.fr       */
+/*   Created: 2021/07/08 10:10:41 by jlaurent          #+#    #+#             */
+/*   Updated: 2021/07/08 11:15:11 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,3 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-void	ft_putnbr(int nb)
-{
-	unsigned int	i;
-
-	if (nb < 0)
-	{
-		i = -nb;
-		ft_putchar('-');
-	}
-	else
-	{
-		i = nb;
-	}
-	if (i > 9)
-	{
-		ft_putnbr(i / 10);
-		i %= 10;
-	}
-	ft_putchar(i + '0');
-}
-
-/*int	main()
-{
-	ft_putnbr(-2147483648);
-	ft_putchar('\n');
-	ft_putnbr(2147483647);
-	ft_putchar('\n');
-	ft_putnbr(0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 18:36:42 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/13 13:05:45 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/22 09:47:34 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_print_comb2(void)
 	}
 }
 
-int	main()
+/*int	main()
 {
 	ft_print_comb2();
-}
+}*/

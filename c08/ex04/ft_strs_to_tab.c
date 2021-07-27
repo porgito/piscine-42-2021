@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/21 09:53:42 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/26 14:49:39 by jlaurent         ###   ########.fr       */
+/*   Created: 2021/07/26 15:07:26 by jlaurent          #+#    #+#             */
+/*   Updated: 2021/07/26 20:33:51 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stock_str.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
-	int	n;
+	int	i;
 
-	n = 0;
-	while (str[n] != '\0')
-		n++;
-	return (n);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 char	*ft_strcpy(char *dest, char *src)
@@ -41,18 +43,31 @@ char	*ft_strdup(char *src)
 {
 	char	*dest;
 
-	dest = malloc(ft_strlen(src) + 1);
+	dest = (char *) malloc(ft_strlen(src) + 1);
 	if (dest == NULL)
 		return (NULL);
 	ft_strcpy(dest, src);
 	return (dest);
 }
 
-/*int	main()
-	
+struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	char	src[] = "salut";
+	t_stock_str	*tableau;
+	int			i;
 
-	printf("%s\n", ft_strdup(src));
-	printf("%p", ft_strdup(src));
-}*/
+	i = 0;
+	tableau = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
+	if (tableau == NULL)
+		return (NULL);
+	while (i < ac)
+	{
+		tableau[i].size = ft_strlen(av[i]);
+		tableau[i].str = av[i];
+		tableau[i].copy = ft_strdup(av[i]);
+		i++;
+	}
+	tableau[i].size = 0;
+	tableau[i].str = 0;
+	tableau[i].copy = 0;
+	return (tableau);
+}

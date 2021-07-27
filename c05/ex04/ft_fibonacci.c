@@ -6,7 +6,7 @@
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 22:33:32 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/19 15:04:25 by jlaurent         ###   ########.fr       */
+/*   Updated: 2021/07/22 11:00:12 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_fibonacci(int index)
 	return (ft_fibonacci(index - 1) + (ft_fibonacci(index - 2)));
 }
 
-int	main()
+/*int	main()
 {
 	printf("%d\n", ft_fibonacci(-1));
 	printf("%d\n", ft_fibonacci(0));
@@ -31,4 +31,4 @@ int	main()
 	printf("%d\n", ft_fibonacci(4));
 	printf("%d\n", ft_fibonacci(5));
 	printf("%d\n", ft_fibonacci(10));
-}
+}*/

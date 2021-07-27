@@ -1,48 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaurent <jlaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 14:32:24 by jlaurent          #+#    #+#             */
-/*   Updated: 2021/07/22 09:46:41 by jlaurent         ###   ########.fr       */
+/*   Created: 2021/07/15 12:11:49 by jlaurent          #+#    #+#             */
+/*   Updated: 2021/07/17 20:42:07 by jlaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	nb;
 
-void	ft_putnbr(int nb)
-{
-	unsigned int	i;
-
-	if (nb < 0)
+	nb = 0;
+	while (str[nb] != '\0')
 	{
-		i = -nb;
-		ft_putchar('-');
+		nb++;
 	}
-	else
-	{
-		i = nb;
-	}
-	if (i > 9)
-	{
-		ft_putnbr(i / 10);
-		i %= 10;
-	}
-	ft_putchar(i + '0');
+	return (nb);
 }
 
 /*int	main()
 {
-	ft_putnbr(-2147483648);
-	ft_putchar('\n');
-	ft_putnbr(2147483647);
-	ft_putchar('\n');
-	ft_putnbr(0);
+	char	str[] = "fvdsjilj";
+	printf("%d", ft_strlen(str));
 }*/
